@@ -457,6 +457,9 @@ a {
 }
 .assortment {
   padding: 1rem 0;
+  background: url(/candy-shop/assets/img/assotment-background.png) no-repeat;
+  background-size: contain;
+  background-position: top 13rem left 2rem;
 }
 .assortment__title {
   font-size: 3rem;
@@ -703,6 +706,184 @@ a {
   .orders__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
+  }
+}
+.order {
+  background: #081130;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.order::before {
+  content: "";
+  position: absolute;
+  width: 61.125rem;
+  height: 64.625rem;
+  background-image: url(base-url/assets/img/about-phone.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.order__image-top {
+  margin-bottom: 6.813rem;
+}
+.order-background-top {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+.order__background-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+.order__container {
+  margin-left: auto;
+  max-width: 30.063rem;
+  margin-bottom: 28.688rem;
+}
+.order__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.order__info-span {
+  padding: 0.625rem 1.125rem;
+  display: inline-block;
+  width: max-content;
+  font-size: 0.688rem;
+  border-radius: 0.313rem;
+  color: #2e363e;
+  background-color: #f2f6fa;
+}
+.order__info-title {
+  font-size: 3rem;
+  line-height: 125%;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+.order__info-p {
+  font-size: 1.313rem;
+  line-height: 143%;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+.order__info-btn {
+  background: #FED84C;
+  color: #2e363e;
+  font-size: 1.125rem;
+  padding: 1.875rem 3.125rem 1.875rem 3.125rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: max-content;
+  margin-top: 1rem;
+}
+.order__info-btn:hover {
+  transform: scale(1.03);
+  background-color: #434b53;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .order__container {
+    margin-left: auto;
+    max-width: 28.063rem;
+    margin-bottom: 32.688rem;
+  }
+  .order__image-top {
+    margin-bottom: 0;
+  }
+  .order__info {
+    gap: 1rem;
+  }
+  .order::before {
+    width: 31rem;
+    height: 34rem;
+    background-image: url(/candy-shop/assets/img/about-phone-tablet.png);
+    background-repeat: no-repeat;
+  }
+  .order__info-span {
+    font-size: 0.45rem;
+    padding: 0.4rem 0.7rem;
+  }
+  .order__info-title {
+    font-size: 1.95rem;
+  }
+  .order__info-p {
+    font-size: 0.9rem;
+  }
+  .order__info-btn {
+    background: #FED84C;
+    color: #2e363e;
+    font-size: 0.75rem;
+    padding: 1.25rem 2rem 1.25rem 2rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .order__info-btn:hover {
+    transform: scale(1.03);
+    background-color: #434b53;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+}
+@media (max-width: 460px) {
+  .order__container {
+    margin-left: 0;
+    max-width: 55%;
+    padding: 0 1rem;
+    margin-bottom: 30rem;
+  }
+  .order__image-top {
+    margin-bottom: 0;
+  }
+  .order::before {
+    width: 26rem;
+    height: 30rem;
+    background-image: url(/candy-shop/assets/img/about-phone-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .order__info {
+    gap: 0.75rem;
+  }
+  .order__info-span {
+    font-size: 0.4rem;
+    padding: 0.35rem 0.6rem;
+  }
+  .order__info-title {
+    font-size: 1.5rem;
+  }
+  .order__info-p {
+    font-size: 0.8rem;
+  }
+  .order__info-btn {
+    background: #FED84C;
+    color: #2e363e;
+    font-size: 0.6rem;
+    padding: 1rem 1.75rem 1rem 1.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .order__info-btn:hover {
+    transform: scale(1.03);
+    background-color: #434b53;
+    color: #FFFFFF;
+    cursor: pointer;
   }
 }
 

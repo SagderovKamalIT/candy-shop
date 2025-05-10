@@ -1,6 +1,12 @@
 .assortment {
   padding: 1rem 0;
 
+      // background: url(../../assets/img/assotment-background.png) no-repeat;
+      background: url(#{$base-url}/assets/img/assotment-background.png) no-repeat;
+    background-size: contain;
+    background-position: top 13rem left 2rem;
+   
+
   &__title {
     font-size: 3rem;
     text-align: center;

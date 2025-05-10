@@ -1,0 +1,188 @@
+.order {
+  background: $romance;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+ 
+  &::before {
+    content: '';
+    position: absolute;
+    width: 61.125rem;
+    height: 64.625rem;
+    // background-image: url(../../assets/img/about-phone.png);
+     background-image: url(#{base-url}/assets/img/about-phone.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;  
+    bottom: 0; 
+    z-index: 1;
+  }
+
+  &__image-top {
+
+    margin-bottom: 6.813rem;
+
+  }
+
+
+
+  &-background-top {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+
+  &__background-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+  }
+
+
+  &__container {
+     margin-left: auto;
+    max-width: 30.063rem;
+      margin-bottom: 28.688rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+     &-span {
+      padding: 0.625rem 1.125rem;
+     display: inline-block;
+     width: max-content;
+    font-size: 0.688rem;
+    border-radius: 0.313rem;
+    color: $outer-space;
+    background-color: $white-smoke;
+  }
+
+    &-title {
+    font-size: 3rem;
+    line-height: 125%;
+    font-weight: 500;
+letter-spacing: -0.02em;
+color: $white;
+  }
+
+  
+  &-p {
+    font-size: 1.313rem;
+    line-height: 143%;
+letter-spacing: -0.01em;
+color: $white;
+  }
+
+   &-btn {
+      @include btn($naples-yellow, $outer-space, 1.125rem, 1.875rem,3.125rem, 1.875rem, 3.125rem, 0.5rem);
+       width: max-content;
+        margin-top: 1rem;
+    }
+  }
+
+
+}
+
+
+@media (max-width: 1024px) {
+   
+
+    .order {
+
+      &__container {
+     margin-left: auto;
+    max-width: 28.063rem;
+    margin-bottom: 32.688rem
+      }
+
+      &__image-top {
+        margin-bottom: 0;
+      }
+      &__info {
+        gap: 1rem;
+      }
+
+       &::before {
+       width: 31rem;
+        height: 34rem;
+      // background-image: url(../../assets/img/about-phone-tablet.png);
+       background-image: url(#{$base-url}/assets/img/about-phone-tablet.png);
+    background-repeat: no-repeat;
+    }
+
+      &__info-span {
+        font-size: 0.45rem;
+        padding: 0.4rem 0.7rem;
+      }
+
+      &__info-title {
+        font-size: 1.95rem;
+      }
+
+      &__info-p {
+        font-size: 0.9rem;
+      }
+
+      &__info-btn {
+        @include btn($naples-yellow, $outer-space, 0.75rem, 1.25rem, 2rem, 1.25rem, 2rem, 0.375rem);
+      }
+    }
+  }
+
+
+  @media (max-width: 460px) {
+
+  .order {
+    &__container {
+             margin-left: 0;
+        max-width: 55%;
+        padding: 0 1rem;
+        margin-bottom: 30rem;
+    }
+
+    &__image-top {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      width: 26rem;
+      height: 30rem;
+      // background-image: url(../../assets/img/about-phone-mobile.png);
+      background-image: url(#{$base-url}/assets/img/about-phone-mobile.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &__info {
+      gap: 0.75rem;
+    }
+
+    &__info-span {
+      font-size: 0.4rem;
+      padding: 0.35rem 0.6rem;
+    }
+
+    &__info-title {
+      font-size: 1.5rem;
+    }
+
+    &__info-p {
+      font-size: 0.8rem;
+    }
+
+    &__info-btn {
+      @include btn($naples-yellow, $outer-space, 0.6rem, 1rem, 1.75rem, 1rem, 1.75rem, 0.25rem);
+    }
+  }
+}
