@@ -106,6 +106,20 @@ html {
   background-position: center top;
   width: 100%;
   height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+.header__wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/candy-shop/assets/img/about-background.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 1;
 }
 
 .intro-wrap {
@@ -179,10 +193,10 @@ a {
   .wrap {
     padding: 0 1.5rem;
   }
-}
-@media (max-width: 380px) {
-  html {
-    font-size: 55%;
+  .header__wrap::before {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
   }
 }
 .header {

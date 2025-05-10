@@ -20,12 +20,32 @@ html {
 }
 
 .header__wrap {
-   background: url(#{$base-url}/assets/img/background.png) no-repeat;
+    background: url(#{$base-url}/assets/img/background.png) no-repeat;
+    //  background: url(../../assets/img/background.png) no-repeat;
   background-size: cover;
-      background-position: center top;
+  background-position: center top;
+  width: 100%;
+  height: fit-content;
+
+   position: relative;
+  overflow: hidden;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: fit-content;
+    height: 100%;
+    // background: url(../../assets/img/about-background.png) no-repeat;
+     background: url(#{$base-url}/assets/img/about-background.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
 }
+
 
 .intro-wrap {
   padding: 0 2.781rem;
@@ -116,12 +136,18 @@ a {
   padding: 0 1.5rem;
 
 }
-}
 
-@media (max-width: 380px) {
-  html {
-    font-size: 55%;
+.header__wrap {
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+
   }
 
-  
 }
+
+
+  
