@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@import 'reset';
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+@import 'core';
+
+@import 'blocks/header.scss';
+@import 'blocks/about.scss';
+@import 'blocks/assortment.scss';
+@import 'blocks/orders.scss';

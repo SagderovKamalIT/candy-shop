@@ -1,0 +1,127 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%
+}
+
+.container { 
+  @include min-max(320px, 100%); 
+}
+
+
+.wrap {
+  @include min-max(320px, 1920px);
+  width: 100%;
+  padding: 0 23.125rem;
+  box-sizing: border-box;
+}
+
+.header__wrap {
+   background: url(#{$base-url}/assets/img/background.png) no-repeat;
+  background-size: cover;
+      background-position: center top;
+    width: 100%;
+    height: fit-content;
+}
+
+.intro-wrap {
+  padding: 0 2.781rem;
+}
+
+
+body, 
+html {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: $outer-space;
+}
+
+
+a {
+  text-decoration: none;
+ 
+}
+
+@media (max-width: 1620px) {
+  html {
+    font-size: 85%;
+  }
+
+    .wrap {
+  padding: 0 15.125rem;
+}
+}
+
+@media (max-width: 1320px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 1184px) {
+  html {
+    font-size: 65%;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 90%;
+  }
+
+      .wrap {
+  padding: 0 7.125rem;
+
+}
+}
+
+@media (max-width: 820px) {
+ html {
+  font-size: 75%;
+ }
+}
+
+@media (max-width: 710px) {
+ html {
+  font-size: 65%;
+ }
+
+  .wrap {
+  padding: 0 5.125rem;
+
+}
+}
+
+@media (max-width: 580px) {
+ html {
+  font-size: 50%;
+ }
+
+}
+
+@media (max-width: 460px) {
+  html {
+    font-size: 65%;
+  }
+
+  .wrap {
+  padding: 0 1.5rem;
+
+}
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 55%;
+  }
+
+  
+}

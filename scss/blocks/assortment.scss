@@ -1,0 +1,195 @@
+.assortment {
+  padding: 1rem 0;
+
+  &__title {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
+    color: $outer-space;
+    margin-bottom: 5rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eaeaea;
+    border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04);
+
+  img {
+  width: 100%;
+  height: auto;
+  display: block;
+  }
+  }
+
+  &__info {
+     display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3.125rem 2.75rem;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 15.438rem;
+
+    h3 {
+      font-weight: 700;
+       font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: $outer-space;
+    }
+
+    p {
+  
+       font-size: 1rem;
+       line-height: 150%;
+      color: $outer-space;
+    }
+  }
+
+  &-cost {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    width: 10.188rem;
+  }
+
+  &-price {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $river-bed;
+    line-height: 150%;
+  }
+
+  &-button {
+    @include btn($naples-yellow, $outer-space, 1.125rem, 1.25rem, 2.5rem, 1.25rem, 2.5rem, 0.5rem);
+    text-align: center;
+
+  }
+  }
+
+
+
+ 
+
+}
+
+@media (max-width: 1024px) {
+  .assortment {
+    &__title {
+      font-size: 1.95rem;
+      margin-bottom: 3.25rem;
+    }
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+    }
+
+    &__card {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__info {
+      gap: 1rem;
+      padding: 2.03rem 1.79rem;
+
+      &-container {
+        width: 10.04rem;
+
+        h3 {
+          font-size: 0.975rem;
+          margin-bottom: 4px;
+        }
+
+        p {
+          font-size: 0.65rem;
+          line-height: 97.5%;
+        }
+      }
+
+      &-cost {
+        width: 6.6rem;
+      }
+
+      &-price {
+        font-size: 0.975rem;
+      }
+
+      &-button {
+        @include btn($naples-yellow, $outer-space, 0.73rem, 0.81rem, 1.63rem, 0.81rem, 1.63rem, 0.325rem);
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .assortment {
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      
+    }
+
+    &__card {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__info {
+      gap: 1rem;
+      padding: 2rem 1.5rem;
+
+      &-container {
+        width: 100%;
+
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 4px;
+        }
+
+        p {
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+      }
+
+      &-cost {
+        width: 100%;
+      }
+
+      &-price {
+        font-size: 1.1rem;
+      }
+
+      &-button {
+        @include btn($naples-yellow, $outer-space, 0.75rem, 0.9rem, 1.5rem, 0.75rem, 1.5rem, 0.375rem);
+      }
+
+  
+    }
+    }
+  }
+
+
