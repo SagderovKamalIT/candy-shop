@@ -13,7 +13,7 @@
     width: 61.125rem;
     height: 64.625rem;
     // background-image: url(../../assets/img/about-phone.png);
-     background-image: url(#{base-url}/assets/img/about-phone.png);
+     background-image: url(#{$base-url}/assets/img/about-phone.png);
     background-repeat: no-repeat;
     background-size: cover;
     left: 0;  
