@@ -1,0 +1,279 @@
+.form-modal {
+  &__section {
+    padding: 0;
+  }
+
+
+  &__container {
+    max-width: 40.438rem;
+    margin-top: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    &-text {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 125%;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    }
+
+    &-btn {
+   @include btn($naples-yellow, $outer-space, 1.125rem, 1.875rem,3.125rem, 1.875rem, 3.125rem, 0.5rem);
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 50%;
+
+    &:hover {
+      background-color: $river-bed;
+      color: white;
+      transform: scale(1.03);
+    }
+  }
+
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  &__window {
+    position: relative;
+    background: white;
+    padding: 6vh 13.5vw;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.2);
+    position: relative;
+     display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+      width: 60vw;
+      min-width: 40%;
+     max-width: 70%;
+  }
+
+  &__title {
+    font-size: 1.313rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__subtitle {
+    padding: 0 6.188rem;
+    line-height: 143%;
+    color: #2e363e;
+    font-weight: 500;
+    font-size: 1.313rem;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__input {
+    padding: 1.656rem 2.188rem;
+    font-size: 0.75rem;
+    border: 1px solid #000;
+    border-radius: 0.313rem;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-self: center;
+    font-size: 0.75rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.438rem;
+
+    &-input {
+      padding: 0.063rem 0;
+      width: 0.75rem;
+      height: 0.875rem;
+    }
+
+    &-label {
+      font-weight: 400;
+      font-size: 0.688rem;
+      line-height: 130%;
+      color: #7e868e;
+
+      a {
+        font-weight: 400;
+        font-size: 0.688rem;
+        line-height: 130%;
+        color: #7e868e;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+
+  &__submit-btn {
+    width: fit-content;
+    display: flex;
+    align-self: center;
+    padding: 1.281rem 8.813rem;
+    background-color: $naples-yellow;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: $river-bed;
+      color: white;
+      transform: scale(1.03);
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+      color: #666;
+    }
+  }
+
+  &__close-btn img {
+    position: absolute;
+    top: 1.625rem;
+    right: 1.875rem;
+    width: 2.625rem;
+    height: auto;
+    cursor: pointer;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .form-modal {
+    &__container {
+      max-width: 24rem;
+      margin-top: 25%;
+      gap: 2rem;
+
+      &-text {
+        font-size: 1.8rem;
+      }
+
+      &-btn {
+        font-size: 0.875rem;
+        padding: 0.938rem 2.5rem;
+        margin-bottom: 50%;
+      }
+    }
+
+   &__window {
+      padding: clamp(1rem, 5vw, 2.5rem) clamp(1rem, 5vw, 2rem);
+      max-width: 90%;
+    }
+    
+
+    &__title {
+      font-size: 1rem;
+    }
+
+    &__subtitle {
+      font-size: 0.75rem;
+    }
+
+    &__grid {
+      gap: 1rem;
+    }
+
+    &__input {
+      font-size: 0.813rem;
+    }
+
+    &__submit-btn {
+      font-size: 0.875rem;
+    }
+
+    &__close-btn img {
+    top: 1.625rem;
+    right: 1.875rem;
+    width: 1.625rem;
+    height: auto;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .form-modal {
+    &__container {
+      max-width: 90%;
+      margin-top: 36%;
+      gap: 1.5rem;
+
+      &-text {
+        font-size: 4.5vw;
+      }
+
+      &-btn {
+        font-size: 0.7rem;
+        padding: 0.5rem 3.5rem;
+        border-radius: 0.2rem;
+        margin-bottom: 40%;
+      }
+    }
+
+    &__window {
+      padding: 4vw 5vw;
+      max-width: 75%;
+      width: 70%;
+      gap: 1.5rem;
+    }
+
+    &__title {
+      font-size: 4vw;
+    }
+
+    &__subtitle {
+      font-size: 3vw;
+      padding: 0 3vw;
+    }
+
+    &__grid {
+      gap: 0.8rem;
+    }
+
+    &__input {
+      font-size: 3vw;
+      padding: 1rem 1.5rem;
+    }
+
+    &__submit-btn {
+      font-size: 3vw;
+      padding: 1rem 6vw;
+    }
+
+    &__close-btn {
+      width: 6vw;
+      height: auto;
+
+      img {
+        width: 5%;
+        height: auto;
+      }
+    }
+  }
+}

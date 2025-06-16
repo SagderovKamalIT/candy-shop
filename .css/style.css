@@ -748,7 +748,7 @@ a {
 }
 .form-modal__container {
   max-width: 40.438rem;
-  margin-top: 35%;
+  margin-top: 50%;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -780,7 +780,7 @@ a {
   cursor: pointer;
 }
 .form-modal__container-btn:hover {
-  background-color: #434b53;
+  background-color: #2e363e;
   color: white;
   transform: scale(1.03);
 }
@@ -797,36 +797,31 @@ a {
   z-index: 999;
 }
 .form-modal__window {
-  position: relative;
   background: white;
-  padding: 6vh 13.5vw;
+  padding: 2.5rem 1.875rem;
   border-radius: 0.5rem;
+  width: 60%;
+  max-width: 37.5rem;
+  min-width: 20rem;
   box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.2);
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  width: 60vw;
-  min-width: 40%;
-  max-width: 70%;
 }
 .form-modal__title {
-  font-size: 1.313rem;
-  font-weight: 500;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
   text-align: center;
 }
 .form-modal__subtitle {
-  padding: 0 6.188rem;
-  line-height: 143%;
-  color: #2e363e;
-  font-weight: 500;
-  font-size: 1.313rem;
+  font-size: 0.875rem;
   text-align: center;
+  margin-bottom: 1.875rem;
 }
 .form-modal__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 @media (max-width: 500px) {
   .form-modal__grid {
@@ -834,46 +829,23 @@ a {
   }
 }
 .form-modal__input {
-  padding: 1.656rem 2.188rem;
-  font-size: 0.75rem;
-  border: 1px solid #000;
-  border-radius: 0.313rem;
+  padding: 0.625rem;
+  font-size: 0.875rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem;
 }
 .form-modal__checkbox {
-  display: flex;
-  align-self: center;
   font-size: 0.75rem;
+  margin-bottom: 1.25rem;
   text-align: center;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  gap: 0.438rem;
 }
 .form-modal__checkbox-input {
-  padding: 0.063rem 0;
-  width: 0.75rem;
-  height: 0.875rem;
-}
-.form-modal__checkbox-label {
-  font-weight: 400;
-  font-size: 0.688rem;
-  line-height: 130%;
-  color: #7e868e;
-}
-.form-modal__checkbox-label a {
-  font-weight: 400;
-  font-size: 0.688rem;
-  line-height: 130%;
-  color: #7e868e;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
+  margin-right: 0.3125rem;
 }
 .form-modal__submit-btn {
-  width: fit-content;
-  display: flex;
-  align-self: center;
-  padding: 1.281rem 8.813rem;
-  background-color: #FED84C;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #FFD748;
   border: none;
   font-size: 1rem;
   border-radius: 0.3125rem;
@@ -881,7 +853,7 @@ a {
   transition: all 0.2s ease;
 }
 .form-modal__submit-btn:hover {
-  background-color: #434b53;
+  background-color: #2e363e;
   color: white;
   transform: scale(1.03);
 }
@@ -890,102 +862,17 @@ a {
   cursor: not-allowed;
   color: #666;
 }
-.form-modal__close-btn img {
+.form-modal__close-btn {
   position: absolute;
-  top: 1.625rem;
-  right: 1.875rem;
-  width: 2.625rem;
-  height: auto;
+  top: 0.9375rem;
+  right: 0.9375rem;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
   cursor: pointer;
-}
-
-@media (max-width: 1024px) {
-  .form-modal__container {
-    max-width: 24rem;
-    margin-top: 25%;
-    gap: 2rem;
-  }
-  .form-modal__container-text {
-    font-size: 1.8rem;
-  }
-  .form-modal__container-btn {
-    font-size: 0.875rem;
-    padding: 0.938rem 2.5rem;
-    margin-bottom: 50%;
-  }
-  .form-modal__window {
-    padding: clamp(1rem, 5vw, 2.5rem) clamp(1rem, 5vw, 2rem);
-    max-width: 90%;
-  }
-  .form-modal__title {
-    font-size: 1rem;
-  }
-  .form-modal__subtitle {
-    font-size: 0.75rem;
-  }
-  .form-modal__grid {
-    gap: 1rem;
-  }
-  .form-modal__input {
-    font-size: 0.813rem;
-  }
-  .form-modal__submit-btn {
-    font-size: 0.875rem;
-  }
-  .form-modal__close-btn img {
-    top: 1.625rem;
-    right: 1.875rem;
-    width: 1.625rem;
-    height: auto;
-  }
-}
-@media (max-width: 460px) {
-  .form-modal__container {
-    max-width: 90%;
-    margin-top: 36%;
-    gap: 1.5rem;
-  }
-  .form-modal__container-text {
-    font-size: 4.5vw;
-  }
-  .form-modal__container-btn {
-    font-size: 0.7rem;
-    padding: 0.5rem 3.5rem;
-    border-radius: 0.2rem;
-    margin-bottom: 40%;
-  }
-  .form-modal__window {
-    padding: 4vw 5vw;
-    max-width: 75%;
-    width: 70%;
-    gap: 1.5rem;
-  }
-  .form-modal__title {
-    font-size: 4vw;
-  }
-  .form-modal__subtitle {
-    font-size: 3vw;
-    padding: 0 3vw;
-  }
-  .form-modal__grid {
-    gap: 0.8rem;
-  }
-  .form-modal__input {
-    font-size: 3vw;
-    padding: 1rem 1.5rem;
-  }
-  .form-modal__submit-btn {
-    font-size: 3vw;
-    padding: 1rem 6vw;
-  }
-  .form-modal__close-btn {
-    width: 6vw;
-    height: auto;
-  }
-  .form-modal__close-btn img {
-    width: 5%;
-    height: auto;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

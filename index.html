@@ -40,7 +40,7 @@
 
                <li class="header__item header__item--tel">
             <img src="./assets/icons/phone.svg" alt="Иконка телефон" />
-            <div class="header__item--tel-container">
+            <div class="header__item--tel-container"> 
               <a
                 href="tel:+7 (812)844-95-49"
                 class="header__item--tel-link"
@@ -233,48 +233,57 @@
   </div>
 </section>
 
-<section class="order">
 
-  <picture>
-    <source media="(max-width: 460px)" srcset="./assets/img/clouds-background-top-mobile.png">
-        <source media="(max-width: 1024px)" srcset="./assets/img/clouds-background-top-tablet.png">
+ <div class="form-modal">
+  <section class="form-modal__section">
+    <div class="form-wrap">
+      <div class="form-modal__container">
+        <h2 class="form-modal__container-text">
+          Капкейки не ждут! <br>
+          Оставьте заявку —  <br>
+          и сладкое настроение  <br>
+          уже в пути к вам 😋
+        </h2>
 
-    <img class="order__background-top order__image-top" src="./assets/img/clouds-background-top.png" alt="Облако">
-  </picture>
-
-
-  <div class="wrap">
-    <div class="order__container">
-      <div class="order__info">
-        <span class="order__info-span">Не нашли то что нужно?</span>
-        <h2 class="order__info-title">Приготовим заказ любой сложности по фото или эскизу</h2>
-        <p class="order__info-p">
-          Загрузите фотографию или эскиз капкейков, и мы рассчитаем стоимость за 30 минут
-        </p>
-
-          <a
-          class="order__info-btn"
-           href="#"
-           target="_blank"
-          rel="noopener noreferrer">
-           Загрузить фотографию
-          </a>
+        <button class="form-modal__container-btn" id="openModalBtn">Заказать</button>
       </div>
 
+      <div class="form-modal__overlay" id="modalOverlay">
+        <div class="form-modal__window">
+          <div class="form-modal__close-btn" id="closeModalBtn">
+            <img src="./assets/icons/form-close-btn.svg" alt="закрывающая кнопка">
+          </div>
+
+          <h2 class="form-modal__title">Чтобы сделать заказ, расскажите нам о себе</h2>
+
+          <div class="form-modal__grid">
+            <input class="form-modal__input" type="text" id="name" placeholder="Имя" />
+            <input class="form-modal__input" type="tel" id="phone" placeholder="Телефон" />
+            <input class="form-modal__input" type="email" placeholder="Электронная почта" />
+            <input class="form-modal__input" type="text" placeholder="Удобное для звонка время" />
+          </div>
+
+          <p class="form-modal__subtitle">
+            Мы перезвоним Вам в удобное время, чтобы уточнить ваши пожелания
+          </p>
+
+          <div class="form-modal__checkbox">
+            <input class="form-modal__checkbox-input" type="checkbox" id="agree" />
+            <label class="form-modal__checkbox-label" for="agree">
+              Нажимая на кнопку, вы соглашаетесь с
+              <a href="#">условиями обработки персональных данных</a>
+            </label>
+          </div>
+
+          <button class="form-modal__submit-btn" id="submitOrder" disabled>Сделать заказ</button>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+</div>
 
 
-  <picture>
 
-    <source media="(max-width: 460px)" srcset="./assets/img/clouds-background-bottom-mobile.png">
-    <source media="(max-width: 1024px)" srcset="./assets/img/clouds-background-bottom-tablet.png">
-
-    <img class="order__background-bottom order__image-bottom" src="./assets/img/clouds-background-bottom.png" alt="Облако">
-  </picture>
-
-</section>
 
 
 <section class="orders" >
@@ -337,9 +346,10 @@
 
 </section>
 
-<section class="form" >
 
-</section>
+
+
+
 
 
 
@@ -349,5 +359,7 @@
       </main>
 
 
+
+      <script src="./js/form.js"></script>
   </body>
 </html>
