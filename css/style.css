@@ -126,14 +126,14 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../../assets/img/about-background.png) no-repeat;
+  background: url(/candy-shop/assets/img/about-background.png) no-repeat;
   background-size: contain;
   background-position: center;
   z-index: 1;
 }
 
 .form-modal {
-  background: url(../assets/img/form-backgrouns.png) no-repeat;
+  background: url(/candy-shop/assets/img/form-backgrouns.png) no-repeat;
   background-size: cover;
   background-position: center top;
   width: 100%;
@@ -489,7 +489,7 @@ a {
 }
 .assortment {
   padding: 1rem 0;
-  background: url(../../assets/img/assotment-background.png) no-repeat;
+  background: url(/candy-shop/assets/img/assotment-background.png) no-repeat;
   background-size: contain;
   background-position: top 13rem left 2rem;
 }
@@ -624,7 +624,7 @@ a {
   .assortment__title {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    background: url(../../assets/img/assotment-background.png) no-repeat;
+    background: url(/candy-shop/assets/img/assotment-background.png) no-repeat;
     background-size: contain;
     background-position: top 13rem left 0;
   }
