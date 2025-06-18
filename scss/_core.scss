@@ -27,8 +27,7 @@ html {
 }
 
 .header__wrap {
-    // background: url(#{$base-url}/assets/img/background.png) no-repeat;
-     background: url(../../assets/img/background.png) no-repeat;
+  background: url(#{$base-url}/assets/img/background.png) no-repeat;
   background-size: cover;
   background-position: center top;
   width: 100%;

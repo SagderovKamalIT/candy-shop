@@ -111,7 +111,7 @@ html {
 }
 
 .header__wrap {
-  background: url(../../assets/img/background.png) no-repeat;
+  background: url(/candy-shop/assets/img/background.png) no-repeat;
   background-size: cover;
   background-position: center top;
   width: 100%;
